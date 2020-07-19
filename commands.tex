@@ -1,0 +1,168 @@
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{cd}
+\tikzstyle{var} = [rectangle, minimum width=1cm, minimum height=0.5cm, text centered, draw=black, fill=white!30]
+\tikzstyle{output} = [rectangle, text centered, draw=black, fill=gray!20]
+\tikzstyle{input} = [rectangle, text centered, draw=black, fill=green!20]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\setlength{\parindent}{0pt}
+
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\purple}[1]{\textcolor{purple}{#1}}
+\newcommand{\gray}[1]{\textcolor{gray}{#1}}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[subsection]
+
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{digression}[theorem]{Digression}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{note}[theorem]{Note}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{slogan}[theorem]{Slogan}
+\newtheorem{warning}[theorem]{Warning}
+
+\newcommand{\thistheoremname}{}
+\newtheorem{genericthm}[theorem]{\thistheoremname}
+\newenvironment{customenvironment}[1]
+  {\renewcommand{\thistheoremname}{#1}%
+   \begin{genericthm}}
+  {\end{genericthm}}
+
+\renewcommand{\setminus}{\smallsetminus}
+\newcommand{\minus}{\smallsetminus}
+
+\newcommand{\iso}{\simeq}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\lrangle}[1]{\langle #1 \rangle}
+
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\B}{\text{B}}
+\newcommand{\Bez}{\text{B\'ez}}
+\newcommand{\BGL}{\text{BGL}}
+\newcommand{\Bl}{\text{Bl}}
+\renewcommand{\char}{\text{char}}
+\newcommand{\cof}{\text{cof}}
+\newcommand{\colim}{\text{colim}}
+\newcommand{\Disc}{\text{Disc}}
+\newcommand{\EKL}{\text{EKL}}
+\newcommand{\End}{\text{End}}
+\newcommand{\Fix}{\text{Fix}}
+\newcommand{\Frac}{\text{Frac}}
+\newcommand{\Frob}{\text{Frob}}
+\newcommand{\Fun}{\text{Fun}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\GW}{\text{GW}}
+\newcommand{\Gr}{\text{Gr}}
+\newcommand{\grad}{\text{grad}}
+\newcommand{\Hom}{\text{Hom}}
+\providecommand{\ind}{\text{ind}}
+\newcommand{\Jac}{\text{Jac}}
+\newcommand{\Map}{\text{Map}}
+\newcommand{\op}{\text{op}}
+\newcommand{\Pic}{\text{Pic}}
+\newcommand{\Pre}{\text{Pre}}
+\newcommand{\Proj}{\text{Proj}\hspace{0.1em}}
+\newcommand{\PSL}{\text{PSL}}
+\newcommand{\rank}{\text{rank}}
+\newcommand{\Rep}{\text{Rep}}
+\newcommand{\Res}{\text{Res}}
+\newcommand{\s}{\text{s}}
+\newcommand{\sgn}{\text{sgn}}
+\newcommand{\Sh}{\text{Sh}}
+\newcommand{\sig}{\text{sig}}
+\newcommand{\Sm}{\textit{Sm}}
+\newcommand{\SO}{\text{SO}}
+\newcommand{\Sp}{\text{Sp}}
+\newcommand{\Spc}{\text{Spc}}
+\newcommand{\Spec}{\text{Spec}\hspace{0.1em}}
+\newcommand{\Spin}{\text{Spin}}
+\providecommand{\spn}{\text{span}}
+\newcommand{\sSet}{\textit{sSet}}
+\newcommand{\SU}{\text{SU}}
+\newcommand{\supp}{\text{supp}}
+\newcommand{\Sym}{\text{Sym}}
+
+\newcommand{\Th}{\text{Th}}
+\newcommand{\Tr}{\text{Tr}}
+\newcommand{\type}{\text{type}}
+
+
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\providecommand{\CP}{\mathbb{C}\mathrm{P}}
+\renewcommand{\O}{\mathcal{O}}
+\renewcommand{\H}{\textbf{H}}
+
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
+\let\phi\varphi
+\let\bar\overline
+\let\tilde\widetilde
+\newcommand{\gw}[1]{\left\langle #1 \right\rangle}
+
+\providecommand\smsh{\wedge}
+
+
+
+
+\newcommand{\G}{\mathbb{G}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\und}[1]{\underline{#1}}
+
+\newcommand{\po}{\arrow[ul,phantom,"\ulcorner" very near start]}
+\newcommand{\pb}{\arrow[dr,phantom,"\lrcorner" very near start]}
+\newcommand{\xto}[1]{\xrightarrow{#1}}
+\newcommand{\from}{\leftarrow}
+\newcommand{\xfrom}[1]{\overset{#1}{\leftarrow}}
+
+\newcommand{\hookto}{\xhookrightarrow{}}
+\newcommand{\xhookto}[1]{\overset{#1}{\hookrightarrow}}
+
+\newcommand{\hookfrom}{\xhookleftarrow{}}
+\newcommand{\xhookfrom}[1]{\xhookleftarrow{#1}}
+
+\newcommand{\tto}{\twoheadrightarrow}
+\newcommand{\xtto}[1]{\overset{#1}{\twoheadrightarrow}}
+\newcommand{\ffrom}{\twoheadleftarrow}
+\newcommand{\xffrom}[1]{\overset{#1}{\ffrom}}
+
+\newcommand{\ladjoint}[2]{ #1\rightleftarrows #2 }
+\makeatletter
+\newcommand{\superimpose}[2]{%
+  {\ooalign{$#1\@firstoftwo#2$\cr\hfil$#1\@secondoftwo#2$\hfil\cr}}}
+\makeatother
+\newcommand{\smallslash}{\mbox{\tiny/}}
+
+\newcommand{\clhook}{\mathrel{\raisebox{0.1em}{$\mathrel{\mathpalette\superimpose{{\hspace{0.1cm}\vspace{0.1em}\smallslash}{\hookrightarrow}}}$}}}
+\newcommand{\xclhook}[1]{\overset{#1}{\clhook}}
+
+\newcommand{\clhookfrom}{\mathrel{\raisebox{0.1em}{$\mathrel{\mathpalette\superimpose{{\hspace{0.1cm}\vspace{0.1em}\smallslash}{\hookleftarrow}}}$}}}
+
+\newcommand{\ohook}{\mathrel{\raisebox{0.03em}{$\mathrel{\mathpalette\superimpose{{\hspace{0.1cm}\vspace{0.03em}\mbox{\small$\circ$}}{\hookrightarrow}}}$}}}
+
+\newcommand{\ohookfrom}{\mathrel{\raisebox{0.03em}{$\mathrel{\mathpalette\superimpose{{\hspace{0.1cm}\vspace{0.03em}\mbox{\small$\circ$}}{\hookleftarrow}}}$}}}
